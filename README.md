@@ -62,18 +62,34 @@ void ShowLED(){
 
 
 void ReadVolume(){ 
+
   sensorValue = analogRead (sensorPin);
+  
   if(sensorValue == 0){
+  
     countZero++;
+    
     if(countZero >= (holding * 1000 / delayTime)){
+    
       balance = 0;
+      
     }
+    
   }else{
+  
     countZero = 0;
+    
     if(balance == 0){
+    
       balance = sensorValue;
+      
     }else{
+    
       balance = (balance * 2 + sensorValue) / 3;
+      
     }
+    
   }
+  
 }
+
