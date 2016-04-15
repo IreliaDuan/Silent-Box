@@ -1,4 +1,4 @@
-# Silent-Box
+# The Beat Box
 Arduino Project
 
 
