@@ -7,19 +7,17 @@ The beat box project is using Led lights to display the volume and beatsthrough 
 I think my project should be slow interaction.The concept of my project basically is LED light interacts with the music and beats. User could choose the music which they like and enjoy the LED display for the volume and the beat.
 
 #Components
-Several LED light bulbs
-
-analog sound sensor
-
-9V battery
-
-arduino kit
-
-mini breadboard
-
-wires
-
+- Several LED light bulbs
+- analog sound sensor
+- 9V battery
+- arduino kit
+- mini breadboard
+- wires
 
 #Circuit
-Please See Fritzing Diagram
+Please See Fritzing Diagram in my PDF
+- breadboard connect to 5V GND on Arduino
+- LED connect to -11 on Arduino
+- analog sound sensor connect to breadboard & A0 on Arduino
+- 9V battery connect to Arduino
 
