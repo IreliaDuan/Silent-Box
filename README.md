@@ -1,95 +1,17 @@
 # The Beat Box
-Arduino Project
 
+# Irelia Duan
 
-my coding
-------------------------------
-int sensorPin = A0; 
+# The beat box project is using Led lights to display the volume and beatsthrough the analog sound sensor. It uses analog sound sensor to sense the volume, the volume higher LED darker, and the volume lower LED lighter. Also, it detects sound every 0.05 second, so the LED could follow the beats of the music.
+I think my project should be slow interaction.The concept of my project basically is LED light interacts with the music and beats. User could choose the music which they like and enjoy the LED display for the volume and the beat.
 
-int ledPin = 11;
+#Components
+Several LED light bulbs
+analog sound sensor
+9V battery
+arduino kit
+mini breadboard
+wires
 
-int sensorValue = 0;
-
-int balance = 0;
-
-int countZero = 0;
-
-int holding = 10;
-
-int delayTime = 500;
-
-
-
-void setup () 
-
-{
-
-  pinMode (ledPin, OUTPUT);
-  
-  Serial.begin (9600);
-  
-}
-
- 
-void loop (){
-
-  ReadVolume();
-  
-
-  3fg
-  
-  ShowLED();
-  
-  
-  Serial.println (balance, DEC);
-  
-  delay(delayTime);
-  
-}
-
-
-void ShowLED(){
-
-  int ld = balance / 4;
-  
-  ld = 255 - ld * 5;
-  
-  ld = ld < 0 ? 0 : ld;
-  
-  analogWrite(ledPin, ld);
-  
-}
-
-
-void ReadVolume(){ 
-
-  sensorValue = analogRead (sensorPin);
-  
-  if(sensorValue == 0){
-  
-    countZero++;
-    
-    if(countZero >= (holding * 1000 / delayTime)){
-    
-      balance = 0;
-      
-    }
-    
-  }else{
-  
-    countZero = 0;
-    
-    if(balance == 0){
-    
-      balance = sensorValue;
-      
-    }else{
-    
-      balance = (balance * 2 + sensorValue) / 3;
-      
-    }
-    
-  }
-  
-}
+#Circuit - Please See Fritzing Diagram
 
